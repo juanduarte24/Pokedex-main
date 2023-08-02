@@ -1,0 +1,59 @@
+
+
+.pokedex-title {
+    text-align: center;
+    font-size: 2em;
+    padding: 0 1em 0 1em;
+}
+
+.container-cards {
+
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
+    background: linear-gradient(to left, #2196f3, #f44336);
+
+}
+
+.container-form {
+    margin: 1rem 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.form {
+    margin: 0 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.input-id {
+    width: 230px;
+    height: 20px;
+    border-radius: .2rem 0 0 .2rem;
+    white-space: 10px;
+    box-shadow: 1px 1px 5px;
+    padding-left: 10px
+}
+
+.button-id {
+    height: 20px;
+    border-radius: 0 .2rem .2rem 0;
+    background-color: red;
+    color: white;
+
+
+}
+
+.button-id:hover {
+    background-color: rgba(212, 61, 61, 0.966);
+    color: white;
+
+}

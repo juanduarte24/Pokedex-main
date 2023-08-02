@@ -15,12 +15,12 @@ const navigate = useNavigate()
 const handleClick = ()=>{
 navigate(`/pokedex/${pokemon.id}`)
 }
-
+const firstType = pokemon?.types[0].type.name
     return (
-        <article className='pokecard' onClick={handleClick}>
-            <header className='pokecard-header'> <img className='pokecard-image' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" /></header>
+        <article className={`pokecard ${firstType}-border`} onClick={handleClick}>
+            <header className={`pokecard-header ${firstType}-gradient`}> <img className='pokecard-image' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" /></header>
             <section className='pokecard-body'>
-                <h3 className='pokecard-name'>{pokemon?.name}</h3>
+                <h3 className={`pokecard-name ${firstType}-color`}>{pokemon?.name}</h3>
                 <ul className='pokecard-types'>
                     {
                         pokemon?.types.map(typeInfo => (
@@ -35,7 +35,7 @@ navigate(`/pokedex/${pokemon.id}`)
                         pokemon?.stats.map(stats =>(
                             <li className='pokecard-stat' key={stats.stat.url}>
                                 <h4 className='pokecard-stat-name'>{stats.stat.name}</h4>
-                                <span className='pokecard-stat-name-value'>{stats.base_stat}</span>
+                                <span className={`pokecard-stat-name-value ${firstType}-color`}>{stats.base_stat}</span>
                             </li>
                         ))
                     }
