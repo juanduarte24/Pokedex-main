@@ -1,6 +1,6 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import HomePage from './Pages/HomePage'
+import HomePage from './pages/HomePage'
 import Pokedex from './Pages/Pokedex'
 import PokedexId from './pages/PokedexId'
 import Page404 from './Pages/Page404'
@@ -9,7 +9,11 @@ function App() {
 
 
   return (
-    <div>
+    <div className='container'>
+      {/* <header>
+  <img src="/img/Captura.PNG" alt="" />
+
+      </header> */}
 
       <Routes>
         <Route path='/' element={<HomePage />} />

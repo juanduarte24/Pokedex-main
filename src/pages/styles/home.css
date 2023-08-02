@@ -1,0 +1,54 @@
+.container-home{
+    height: 100%;
+    
+}
+.home-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.home-img{
+    width: 320px;
+}
+
+.home-title {
+    text-align: center;
+}
+
+.home-subtitle {
+    text-align: center;
+    color: red;
+}
+
+.home-p {
+    text-align: center;
+}
+
+.home-input {
+    width: 230px;
+    height: 25.9px;
+    border-radius: .2rem 0 0 .2rem;
+    white-space: 10px;
+    box-shadow: 1px 1px 2px;
+    padding-left: 10px
+}
+
+.home-button {
+    height: 27px;
+    border-radius: 0 .2rem .2rem 0;
+    background-color: red;
+    color: white;
+}
+
+.home-button:hover {
+    background-color: rgba(212, 61, 61, 0.966);
+    color: white;
+
+}
+
+.home-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em 0;
+}
