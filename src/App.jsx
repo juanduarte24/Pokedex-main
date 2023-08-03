@@ -1,9 +1,9 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import Pokedex from './Pages/Pokedex'
+import Pokedex from './pages/Pokedex'
 import PokedexId from './pages/PokedexId'
-import Page404 from './Pages/Page404'
+import Page404 from './pages/Page404'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 function App() {
 
