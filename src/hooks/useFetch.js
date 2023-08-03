@@ -10,7 +10,17 @@ const useFetch = (url) => {
             .then(res => setInfoApi(res.data))
                 .catch(error => console.error(error))
     }
-return [infoApi , getApi]
+    const getTypeApi = (urlType) => {
+        axios.get(urlType)
+            .then(res=>{
+                const obj = {
+                    results : res.data.pokemon.map(e=>e.pokemon)
+                }
+                setInfoApi(obj)
+            })
+                .catch(error => console.error(error))
+    }
+return [infoApi , getApi ,getTypeApi]
 
 }
 

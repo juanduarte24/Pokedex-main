@@ -3,19 +3,30 @@ import { useSelector } from 'react-redux'
 import useFetch from '../hooks/useFetch'
 import PokeCards from '../components/PokeCards'
 import './styles/input.css'
+import SelectType from '../components/SelectType'
 
 const Pokedex = () => {
 
     const [inputValue, setInputValue] = useState('')
+    const [selectValue, setSelectValue] = useState('allPokemons')
+    console.log(selectValue)
+
 
     const trainer = useSelector(reducer => reducer.trainer)
+
     const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=100'
-    const [pokemons, getAllPokemons] = useFetch(url)
+    const [pokemons, getAllPokemons ,getPokemonsByType] = useFetch(url)
 
     useEffect(() => {
-        getAllPokemons()
+        if(selectValue === 'allPokemons'){
+            
+            getAllPokemons()
+        
+        }else{
+            getPokemonsByType(selectValue)
+        }
 
-    }, [])
+    }, [selectValue])
     const inputSearch = useRef()
 
     const handleSubmit = e => {
@@ -23,11 +34,13 @@ const Pokedex = () => {
         setInputValue(inputSearch.current.value.trim().toLowerCase())
 
     }
+    // console.log(pokemons)
 
     const cbFilter = poke => poke.name.includes(inputValue)
-    console.log(inputValue)
 
-    // console.log(pokemons)
+    
+
+    console.log(selectValue)
     return (
         <>
             <header className='header-pokedex'>
@@ -43,6 +56,7 @@ const Pokedex = () => {
                     <input className='input-id' id='input-id' type="text" ref={inputSearch} />
                     <button className='button-id'>Search</button>
                 </form>
+                <SelectType setSelectValue={setSelectValue}/>
             </div>
             <div className='container-cards'>
                 {
