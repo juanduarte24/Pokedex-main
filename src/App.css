@@ -8,3 +8,6 @@
 select{
     font-size: 1em;
 }
+.container{
+    height: 100%;
+}

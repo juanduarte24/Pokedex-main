@@ -18,6 +18,7 @@ const handleClick = ()=>{
 navigate(`/pokedex/${pokemon.id}`)
 }
 const firstType = pokemon?.types[0].type.name
+
     return (
         <article className={`pokecard ${firstType}-border`} onClick={handleClick}>
             <header className={`pokecard-header ${firstType}-gradient`}> <img className='pokecard-image' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" /></header>

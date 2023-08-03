@@ -9,7 +9,7 @@ const Pokedex = () => {
 
     const [inputValue, setInputValue] = useState('')
     const [selectValue, setSelectValue] = useState('allPokemons')
-    console.log(selectValue)
+    
 
 
     const trainer = useSelector(reducer => reducer.trainer)
@@ -40,7 +40,7 @@ const Pokedex = () => {
 
     
 
-    console.log(selectValue)
+    
     return (
         <>
             <header className='header-pokedex'>
