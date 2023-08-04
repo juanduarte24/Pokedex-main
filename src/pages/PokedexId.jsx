@@ -20,7 +20,7 @@ const PokedexId = () => {
     return (
 
         <div className='pokemon-container'>
-            <header>
+            <header className='pokedexId-header'>
                 <div className='img-container'>
                     <Link to={'/pokedex'}>
 
@@ -28,7 +28,7 @@ const PokedexId = () => {
                     </Link>
                 </div>
             </header>
-            <div >
+            <div className='container-card'>
 
                 <article className={`pokemon-card ${firstType}-border`}>
 

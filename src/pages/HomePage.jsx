@@ -19,19 +19,22 @@ const HomePage = () => {
     }
 
     return (
-        <div className='container-home'>
-            <header className='home-banner'>
+        <div className='container-1'>
+
+            <div className='container-home'>
+                <header className='home-banner'>
 
 
-                <img className='home-img' src="/img/banner.png" alt="" />
+                    <img className='home-img' src="/img/banner.png" alt="" />
 
-            </header>
-            <h2 className='home-subtitle'>Hi Trainer!</h2>
-            <p className='home-p'>To start with the app, give me your trainer name! </p>
-            <form onSubmit={handleSubmit} className='home-form'>
-                <input placeholder='Enter your Trainer Name' className='home-input' type="text" ref={inputTrainer} />
-                <button className='home-button'>Gotta catch'em all!</button>
-            </form>
+                </header>
+                <h2 className='home-subtitle'>Hi Trainer!</h2>
+                <p className='home-p'>To start with the app, give me your trainer name! </p>
+                <form onSubmit={handleSubmit} className='home-form'>
+                    <input placeholder='Enter your Trainer Name' className='home-input' type="text" ref={inputTrainer} />
+                    <button className='home-button'>Gotta catch'em all!</button>
+                </form>
+            </div>
         </div>
     )
 }
